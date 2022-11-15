@@ -11,7 +11,7 @@ export const useStyles = makeStyles((theme) => ({
         boxShadow: '0 0 2rem rgba(0,0,0,0.1)',
         zIndex: "2000",
         [theme.breakpoints.down('sm')]: {
-            padding: '0 2rem',
+            padding: '0 1rem',
         }
     },
     logo:{
@@ -20,6 +20,9 @@ export const useStyles = makeStyles((theme) => ({
         '& a':{
             color: '#000',
             textDecoration: 'none',
+        },
+        [theme.breakpoints.down('sm')]: {
+            display: "none"
         }
     },
     nav:{
@@ -39,6 +42,11 @@ export const useStyles = makeStyles((theme) => ({
                     }
                 }
             }
+        },
+        [theme.breakpoints.down('sm')]: {
+            '& ul':{
+            margin: "auto"
+        }
         }
     }
 }));

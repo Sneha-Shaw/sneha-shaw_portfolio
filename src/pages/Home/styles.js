@@ -9,6 +9,7 @@ export const useStyles = makeStyles((theme) => ({
         backgroundImage: " linear-gradient(to right,#C33764,#021B79)",
         [theme.breakpoints.down("md")]: {
             flexDirection: "column",
+            backgroundImage: " linear-gradient(to bottom,#C33764 10%,#021B79 90%)",
 
         },
     },
@@ -17,6 +18,11 @@ export const useStyles = makeStyles((theme) => ({
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        [theme.breakpoints.down("md")]: {
+            // width: "70%",
+            height: "40%"
+
+        },
     },
     right: {
         width: "40%",
@@ -24,29 +30,47 @@ export const useStyles = makeStyles((theme) => ({
         justifyContent: "center",
         alignItems: "center",
         [theme.breakpoints.down("md")]: {
-            display: "none",
+            width: "70%",
+            textAlign: "center",
+            height: "60%"
         },
+
     },
     wrapper: {
         width: "100%",
+        height: "100%",
         padding: "2rem",
         lineHeight: '1.5',
-        "&>h2":{
-            fontSize:"3rem",
-            color:"white",
-            fontWeight:"bold",
+        
+        "&>h2": {
+            fontSize: "3rem",
+            color: "white",
+            fontWeight: "bold",
         },
-        "&>h1":{
-            fontSize:"4.5rem",
-            color:"#C33764",
-            fontWeight:"bold",
+        "&>h1": {
+            fontSize: "4.5rem",
+            color: "#C33764",
+            fontWeight: "bold",
         },
-        "&>div":{
-            fontSize:"4rem !important",
-            color:"white",
-            fontWeight:"bold",
+        "&>div": {
+            fontSize: "4rem !important",
+            color: "white",
+            fontWeight: "bold",
         },
+        [theme.breakpoints.down("md")]: {
+            textAlign: "left",
 
+            "&>h2": {
+                fontSize: "2rem",
+                marginTop: "1rem"
+            },
+            "&>h1": {
+                fontSize: "2.5rem"
+            },
+            "&>div": {
+                fontSize: "2.5rem !important"
+            },
+        },
     },
     imgContainer: {
         height: 300,
@@ -59,8 +83,9 @@ export const useStyles = makeStyles((theme) => ({
         justifyContent: "center",
         alignItems: "center",
         [theme.breakpoints.down("md")]: {
-            height: 300,
-            width: 300,
+            height: 200,
+            width: 200
+
         },
     },
     imgContainer2: {
@@ -74,8 +99,10 @@ export const useStyles = makeStyles((theme) => ({
         justifyContent: "center",
         alignItems: "center",
         [theme.breakpoints.down("md")]: {
-            height: 300,
-            width: 300,
+            height: 200,
+            width: 200,
+            background: "linear-gradient(to top left,#C33764, #000046)",
+
         },
     },
     img: {
