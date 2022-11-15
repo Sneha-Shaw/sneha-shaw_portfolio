@@ -8,13 +8,13 @@ const Navbar = () => {
     return (
         <div className={classes.container}>
             <div className={classes.logo}>
-                <Link to="/">Portfolio</Link>
+                <Link to="/">My Portfolio</Link>
             </div>
             <div className={classes.nav}>
                 <ul>
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/about">About</Link></li>
-                    <li><Link to="/projects">Projects</Link></li>
+                    <li><a href="https://github.com/Sneha-Shaw?tab=repositories" target="_blank" rel="noreferrer">Projects</a></li>
                     <li><Link to="/contact">Contact</Link></li>
                 </ul>
             </div>

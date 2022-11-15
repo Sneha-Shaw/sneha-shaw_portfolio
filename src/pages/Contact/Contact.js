@@ -1,7 +1,6 @@
 import React from 'react'
 import { useStyles } from './styles'
 import GitHubIcon from '@mui/icons-material/GitHub';
-import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MailIcon from '@mui/icons-material/Mail';
 import { Link } from 'react-router-dom';
@@ -21,18 +20,15 @@ const Contact = () => {
               You can also find me on these platforms
             </p> */}
             <div className={classes.social}>
-              <Link to="">
+              <a href="https://github.com/Sneha-Shaw" target="_blank" rel="noreferrer">
                 <GitHubIcon className={classes.icon} />
-              </Link>
-              <Link to="">
-                <FacebookIcon className={classes.icon} />
-              </Link>
-              <Link to="">
+              </a>
+              <a href="https://www.linkedin.com/in/sneha-shaw-122/" target="_blank" rel="noreferrer">
                 <LinkedInIcon className={classes.icon} />
-              </Link>
-              <Link to="">
+              </a>
+              <a href="mailto:snehashaw122@gmail.com" target="_blank" rel="noreferrer">
                 <MailIcon className={classes.icon} />
-              </Link>
+              </a>
             </div> 
           </div>
          

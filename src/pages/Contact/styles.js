@@ -79,7 +79,7 @@ export const useStyles = makeStyles((theme) => ({
         alignItems: "center",
         justifyContent: "center",
         "& input": {
-            width: "100%",
+            width: "80%",
             height: "5rem",
             margin: "1rem 0",
             padding: "0 2rem",
@@ -90,7 +90,7 @@ export const useStyles = makeStyles((theme) => ({
             borderRadius: "2rem",
         },
         "& textarea": {
-            width: "100%",
+            width: "80%",
             height: "10rem",
             margin: "1rem 0",
             padding: "2rem",
@@ -147,7 +147,7 @@ export const useStyles = makeStyles((theme) => ({
         "& a": {
             width: "5rem",
             height: "5rem",
-            margin: "0 1rem",
+            margin: "0 2rem",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
