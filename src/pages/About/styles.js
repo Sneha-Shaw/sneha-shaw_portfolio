@@ -7,13 +7,13 @@ export const useStyles = makeStyles((theme) => ({
         alignItems: "center",
         justifyContent: "center",
         width: "100%",
-        backgroundColor: "#f5f5f5",
     },
     title: {
         fontSize: "8rem",
         letterSpacing: "2rem",
         color: "#333",
         textAlign: "center",
+        padding: "2rem 0",
         "& span": {
             color: "#f50057",
         },
