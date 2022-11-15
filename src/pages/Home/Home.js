@@ -13,12 +13,17 @@ const Home = () => {
           <h1>Sneha Shaw</h1>
           <TypeAnimation
             sequence={[
-              'A Full Stack Developer', // Types 'One'
-              1000, // Waits 1s
-              'A Tech Enthusiast', // Deletes 'One' and types 'Two'
+              'Full Stack Developer',
+              2000, // Waits 2s
+              'Backend Developer',
               1000, // Waits 2s
-              'A Problem Solver',
-              1000 // Types 'Three' without deleting 'Two'
+              'Tech Enthusiast',
+              1000, // Waits 1s
+              'Problem Solver',
+              1000,
+              'Learner',
+              1000,
+              
             ]}
             repeat={Infinity}
             style={{ fontSize: '2rem' }}
@@ -30,13 +35,13 @@ const Home = () => {
       <div className={classes.right}>
 
         <div className={classes.imgContainer}>
-        <div className={classes.imgContainer2}>
+          <div className={classes.imgContainer2}>
 
-          <img
-            src={pic}
-            alt=""
-            className={classes.img}
-          />
+            <img
+              src={pic}
+              alt=""
+              className={classes.img}
+            />
           </div>
         </div>
       </div>

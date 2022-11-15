@@ -1,8 +1,12 @@
 import React from 'react'
+import { useStyles } from './styles'
 
 const About = () => {
+  const classes = useStyles()
   return (
-    <div>About</div>
+    <div className={classes.container}>
+      
+    </div>
   )
 }
 
