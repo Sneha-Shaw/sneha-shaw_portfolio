@@ -3,7 +3,7 @@ import { useStyles } from './styles'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MailIcon from '@mui/icons-material/Mail';
-import { Link } from 'react-router-dom';
+
 const Contact = () => {
   const classes = useStyles()
   return (

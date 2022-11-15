@@ -9,6 +9,9 @@ export const useStyles = makeStyles((theme) => ({
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: "#f5f5f5",
+        [theme.breakpoints.down('md')]:{
+            height: "unset"
+        }
     },
     title: {
         fontSize: "8rem",
@@ -19,6 +22,10 @@ export const useStyles = makeStyles((theme) => ({
         "& span": {
             color: "#f50057",
         },
+        [theme.breakpoints.down('md')]: {
+            fontSize: "4rem",
+            letterSpacing: ".5rem",
+        }
     },
     container: {
         width: "100%",
@@ -27,7 +34,7 @@ export const useStyles = makeStyles((theme) => ({
         alignItems: "center",
         justifyContent: "center",
         [theme.breakpoints.down("md")]: {
-            flexDirection: "column",
+            flexDirection: "column-reverse",
         },
     },
     left: {
@@ -69,6 +76,9 @@ export const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down("md")]: {
             width: "100%",
             height: "100%",
+            "& h2":{
+                fontSize: "2rem"
+            }
         },
     },
     form: {
@@ -136,6 +146,10 @@ export const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down("md")]: {
             width: "100%",
             height: "100%",
+            "& h2":{
+            width: "90%",
+            fontSize: "2.5rem",
+            }
         },
     },
     social:{
@@ -160,6 +174,9 @@ export const useStyles = makeStyles((theme) => ({
             "&:hover": {
                 backgroundColor: "#f50057",
             }
+        },
+        [theme.breakpoints.down("md")]: {
+            marginBottom: "2rem"
         }
     },
     icon:{
