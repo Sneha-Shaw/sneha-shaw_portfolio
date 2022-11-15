@@ -84,7 +84,9 @@ export const useStyles = makeStyles((theme) => ({
         fontWeight: "bold !important",
         color: "white",
         backgroundColor: "#C33764 !important",
-
+        "&:hover": {
+            backgroundColor: "#f50057 !important",
+        }
     },
     skillContainer: {
         display: "flex",

@@ -10,7 +10,7 @@ const About = () => {
   const classes = useStyles()
   return (
     <div className={classes.Maincontainer}>
-      <h1 className={classes.title}>ABOUT <span>ME</span></h1>
+      <h1 className={classes.title}>About <span>Me</span></h1>
       <div className={classes.container}>
         <div className={classes.left}>
           <div className={classes.imgDesign}>

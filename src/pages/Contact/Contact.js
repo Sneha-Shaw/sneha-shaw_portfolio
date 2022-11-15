@@ -9,7 +9,7 @@ const Contact = () => {
   const classes = useStyles()
   return (
     <div className={classes.Maincontainer}>
-      <h1 className={classes.title}>CONTACT <span>ME</span></h1>
+      <h1 className={classes.title}>Contact <span>Me</span></h1>
       {/* mail me form */}
       <div className={classes.container}>
         <div className={classes.left}>

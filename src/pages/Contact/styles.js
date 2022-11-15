@@ -15,6 +15,7 @@ export const useStyles = makeStyles((theme) => ({
         letterSpacing: "2rem",
         color: "#333",
         textAlign: "center",
+        padding: "2rem 0",
         "& span": {
             color: "#f50057",
         },
