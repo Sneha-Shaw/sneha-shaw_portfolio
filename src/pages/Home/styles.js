@@ -6,7 +6,7 @@ export const useStyles = makeStyles((theme) => ({
         height: "100vh",
         justifyContent: "center",
         alignItems: "center",
-        backgroundImage: " linear-gradient(to right,#0575E6,#021B79)",
+        backgroundImage: " linear-gradient(to right,#C33764,#021B79)",
         [theme.breakpoints.down("md")]: {
             flexDirection: "column",
 
@@ -51,7 +51,7 @@ export const useStyles = makeStyles((theme) => ({
     imgContainer: {
         height: 400,
         width: 400,
-        background: "linear-gradient(to bottom left,#0575E6, #021B79)",
+        background: "linear-gradient(to bottom left,#C33764, #000046)",
         // borderRadius: "50em",
         // border:" 1px solid transparent",
         borderRadius: "50%",
@@ -66,7 +66,7 @@ export const useStyles = makeStyles((theme) => ({
     imgContainer2: {
         height: 380,
         width: 380,
-        background: "linear-gradient(to top left,#0575E6, #021B79)",
+        background: "linear-gradient(to top right,#C33764, #000046)",
         // borderRadius: "50em",
         // border:" 1px solid transparent",
         borderRadius: "50%",
