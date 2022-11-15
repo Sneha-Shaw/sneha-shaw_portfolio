@@ -6,7 +6,6 @@ export const useStyles = makeStyles((theme) => ({
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        height: "100vh",
         width: "100%",
         backgroundColor: "#f5f5f5",
     },
@@ -23,7 +22,8 @@ export const useStyles = makeStyles((theme) => ({
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        height: "100%",
+        height: "100vh",
+
         width: "100%",
     },
     left: {
@@ -50,14 +50,17 @@ export const useStyles = makeStyles((theme) => ({
             height: "100%",
             width: "100%",
             objectFit: "cover",
+            borderRadius: "2rem",
+
         },
     },
     imgDesign: {
         position: "absolute",
         height: "60rem",
         width: "40rem",
+        borderRadius: "2rem",
         backgroundImage: "linear-gradient(to left, #000046,#1CB5E0)",
-        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 90%)",
+        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
         top: "0",
         left: "10rem",
         // zIndex: "10",
@@ -74,14 +77,66 @@ export const useStyles = makeStyles((theme) => ({
 
         }
     },
-    button:{
-        width:"30%",
-            height:"5rem",
-            fontSize:"1.7rem !important",
-            fontWeight:"bold !important",
-            color:"white",
-            backgroundColor:"#C33764 !important",
+    button: {
+        width: "30%",
+        height: "5rem",
+        fontSize: "1.7rem !important",
+        fontWeight: "bold !important",
+        color: "white",
+        backgroundColor: "#C33764 !important",
 
+    },
+    skillContainer: {
+        display: "flex",
+        flexDirection: "column",
+        width: "100%",
+        // height: "100vh",
+        backgroundColor: "#f5f5f5",
+
+    },
+    grid: {
+        display: "flex",
+        // flexDirection: "column",
+        width: "100%",
+        height: "100%",
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    gridContainer: {
+        display: "flex",
+        width: "100%",
+        height: "100%",
+        padding: "2rem",
+        flexDirection: "column",
+        "& h2": {
+            fontSize: "4rem",
+            color: "#333",
+            textAlign: "left",
+            marginBottom: "2rem",
+        }
+
+    },
+    gridItem: {
+        display: "flex !important",
+        padding: "1rem !important",
+        backgroundColor: "white !important",
+        borderRadius: "5rem !important",
+        margin: "1rem !important",
+        justifyContent: "space-around !important",
+        alignItems: "center !important",
+
+    },
+    skill: {
+        fontSize: "2rem !important",
+        color: "#333 !important",
+    },
+    icon:{
+        fontSize: "3rem !important",
+        color: "#333 !important",
+        cursor: "pointer !important",
     }
+
+
+
 
 }));
