@@ -17,14 +17,21 @@ export const useStyles = makeStyles((theme) => ({
         "& span": {
             color: "#f50057",
         },
+        [theme.breakpoints.down('md')]: {
+            fontSize: "4rem",
+            letterSpacing: ".5rem",
+        }
     },
     container: {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         height: "100vh",
-
         width: "100%",
+        [theme.breakpoints.down('md')]: {
+            height: "unset",
+            flexDirection: "column"
+        }
     },
     left: {
         display: "flex",
@@ -33,6 +40,10 @@ export const useStyles = makeStyles((theme) => ({
         height: "100%",
         width: "50%",
         position: "relative",
+        [theme.breakpoints.down('md')]: {
+            width: "100%",
+
+        }
     },
     right: {
         display: "flex",
@@ -41,6 +52,10 @@ export const useStyles = makeStyles((theme) => ({
         justifyContent: "space-around",
         height: "50%",
         width: "50%",
+        [theme.breakpoints.down('md')]: {
+            width: "100%",
+
+        }
     },
     imgContainer: {
         height: "60rem",
@@ -53,6 +68,13 @@ export const useStyles = makeStyles((theme) => ({
             borderRadius: "2rem",
 
         },
+        [theme.breakpoints.down('md')]: {
+            width: "20rem",
+            height: "20rem",
+            "& img": {
+                borderRadius: ".5rem",
+            }
+        }
     },
     imgDesign: {
         position: "absolute",
@@ -63,6 +85,10 @@ export const useStyles = makeStyles((theme) => ({
         clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
         top: "0",
         left: "10rem",
+        [theme.breakpoints.down('md')]: {
+            display: "none"
+
+        }
         // zIndex: "10",
     },
     wrapper: {
@@ -75,6 +101,13 @@ export const useStyles = makeStyles((theme) => ({
             fontWeight: "bold",
             textAlign: "left",
 
+        },
+        [theme.breakpoints.down('md')]: {
+            width: "80%",
+            "&>p": {
+                fontSize: "1.5rem"
+            }
+
         }
     },
     button: {
@@ -86,6 +119,12 @@ export const useStyles = makeStyles((theme) => ({
         backgroundColor: "#C33764 !important",
         "&:hover": {
             backgroundColor: "#f50057 !important",
+        },
+        [theme.breakpoints.down('md')]: {
+            width: "60%",
+            height: "unset",
+            fontSize: "1.5rem !important",
+            margin: "2rem 0 !important"
         }
     },
     skillContainer: {
@@ -115,6 +154,11 @@ export const useStyles = makeStyles((theme) => ({
             color: "#333",
             textAlign: "left",
             marginBottom: "2rem",
+        },
+        [theme.breakpoints.down('md')]: {
+            "& h2": {
+                fontSize: "2.5rem"
+            }
         }
 
     },
@@ -132,7 +176,7 @@ export const useStyles = makeStyles((theme) => ({
         fontSize: "2rem !important",
         color: "#333 !important",
     },
-    icon:{
+    icon: {
         fontSize: "3rem !important",
         color: "#333 !important",
         cursor: "pointer !important",
