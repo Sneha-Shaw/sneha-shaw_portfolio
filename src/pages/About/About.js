@@ -23,8 +23,8 @@ const About = () => {
         <div className={classes.right}>
           <div className={classes.wrapper}>
             <p>
-              Hi I'm a 21 year old full stack developer from Kolkata who loves solving problems in ways that are creative and sustainable.
-              My specialty is Front-End Web Design. My hobbies are digital portraits and cycling.
+              Hi I'm a 21 year old full stack developer from Kolkata who loves solving problems in ways that are both creative and sustainable.
+              My specialty is Front-End Web Development. My hobbies are making digital portraits and cycling.
             </p>
           </div>
           <Button

@@ -38,8 +38,8 @@ export const useStyles = makeStyles((theme) => ({
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        justifyContent: "center",
-        height: "100%",
+        justifyContent: "space-around",
+        height: "50%",
         width: "50%",
     },
     imgContainer: {

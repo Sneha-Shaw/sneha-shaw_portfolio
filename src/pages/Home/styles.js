@@ -13,7 +13,7 @@ export const useStyles = makeStyles((theme) => ({
         },
     },
     left: {
-        width: "30%",
+        width: "40%",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -37,8 +37,8 @@ export const useStyles = makeStyles((theme) => ({
             fontWeight:"bold",
         },
         "&>h1":{
-            fontSize:"4rem",
-            color:"white",
+            fontSize:"4.5rem",
+            color:"#C33764",
             fontWeight:"bold",
         },
         "&>div":{
@@ -49,8 +49,8 @@ export const useStyles = makeStyles((theme) => ({
 
     },
     imgContainer: {
-        height: 400,
-        width: 400,
+        height: 300,
+        width: 300,
         background: "linear-gradient(to bottom left,#C33764, #000046)",
         // borderRadius: "50em",
         // border:" 1px solid transparent",
@@ -64,8 +64,8 @@ export const useStyles = makeStyles((theme) => ({
         },
     },
     imgContainer2: {
-        height: 380,
-        width: 380,
+        height: 280,
+        width: 280,
         background: "linear-gradient(to top right,#C33764, #000046)",
         // borderRadius: "50em",
         // border:" 1px solid transparent",

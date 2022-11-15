@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from '@mui/material/styles'
 import theme from './theme'
 import Navbar from './components/Navbar/Navbar'
@@ -7,6 +7,7 @@ import Home from './pages/Home/Home'
 import About from './pages/About/About'
 import Projects from './pages/Project/Project'
 import Contact from './pages/Contact/Contact'
+import Footer from './components/Footer/Footer'
 
 const Router = () => {
 
@@ -21,6 +22,7 @@ const Router = () => {
                     <Route exact path="/contact" element={<Contact />} />
                 </Routes>
             </BrowserRouter>
+            <Footer />
          </ThemeProvider>
 
     )

@@ -8,33 +8,7 @@ const Home = () => {
   return (
     <div className={classes.container}>
       <div className={classes.left}>
-        <div className={classes.wrapper}>
-          <h2>Hi There, I'm</h2>
-          <h1>Sneha Shaw</h1>
-          <TypeAnimation
-            sequence={[
-              'Full Stack Developer',
-              2000, // Waits 2s
-              'Backend Developer',
-              1000, // Waits 2s
-              'Tech Enthusiast',
-              1000, // Waits 1s
-              'Problem Solver',
-              1000,
-              'Learner',
-              1000,
-              
-            ]}
-            repeat={Infinity}
-            style={{ fontSize: '2rem' }}
-            speed="45"
-          />
-
-        </div>
-      </div>
-      <div className={classes.right}>
-
-        <div className={classes.imgContainer}>
+      <div className={classes.imgContainer}>
           <div className={classes.imgContainer2}>
 
             <img
@@ -44,6 +18,31 @@ const Home = () => {
             />
           </div>
         </div>
+      </div>
+      <div className={classes.right}>
+      <div className={classes.wrapper}>
+          <h2>Hi There, I'm</h2>
+           <h1>Sneha Shaw</h1>
+          {/*<h2>I am a</h2> */}
+          <TypeAnimation
+            sequence={[
+              'I\'m a Full Stack Developer',
+              2000, // Waits 2s
+              'I\'m a Coding Enthusiast',
+              1000, // Waits 1s
+              'I\'m a Problem Solver',
+              1000,
+              'I\'m a Learner',
+              1000,
+              
+            ]}
+            repeat={Infinity}
+            style={{ fontSize: '2rem' }}
+            speed="45"
+          />
+
+        </div>
+       
       </div>
 
     </div>
