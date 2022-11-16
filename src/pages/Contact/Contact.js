@@ -12,11 +12,11 @@ const Contact = () => {
       {/* mail me form */}
       <div className={classes.container}>
         <div className={classes.left}>
-        <div className={classes.wrapper}>
-          <h2>
-            Let's <span>create</span> Something Together
-          </h2>
-             {/* <p>
+          <div className={classes.wrapper}>
+            <h2>
+              Let's <span>create</span> Something Together
+            </h2>
+            {/* <p>
               You can also find me on these platforms
             </p> */}
             <div className={classes.social}>
@@ -29,12 +29,20 @@ const Contact = () => {
               <a href="mailto:snehashaw122@gmail.com" target="_blank" rel="noreferrer">
                 <MailIcon className={classes.icon} />
               </a>
-            </div> 
+            </div>
+            {/* mail info */}
+            <div className={classes.mail}>
+              <h3>Mail Me</h3>
+              <p>
+                snehashaw122@gmail.com
+              </p>
+              </div>
+
           </div>
-         
+
         </div>
         <div className={classes.right}>
-        <div className={classes.formWrapper}>
+          <div className={classes.formWrapper}>
             <h2>
               Don't hesitate to drop me a Hi !
             </h2>

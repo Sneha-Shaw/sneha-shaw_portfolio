@@ -17,7 +17,7 @@ export const useStyles = makeStyles((theme) => ({
         "& span": {
             color: "#f50057",
         },
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down('sm')]: {
             fontSize: "4rem",
             letterSpacing: ".5rem",
         }
@@ -40,7 +40,7 @@ export const useStyles = makeStyles((theme) => ({
         height: "100%",
         width: "50%",
         position: "relative",
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down('sm')]: {
             width: "100%",
 
         }
@@ -52,7 +52,7 @@ export const useStyles = makeStyles((theme) => ({
         justifyContent: "space-around",
         height: "50%",
         width: "50%",
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down('sm')]: {
             width: "100%",
 
         }
@@ -68,11 +68,11 @@ export const useStyles = makeStyles((theme) => ({
             borderRadius: "2rem",
 
         },
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down('sm')]: {
             width: "20rem",
             height: "20rem",
             "& img": {
-                borderRadius: ".5rem",
+                borderRadius: "50%",
             }
         }
     },
@@ -81,14 +81,23 @@ export const useStyles = makeStyles((theme) => ({
         height: "60rem",
         width: "40rem",
         borderRadius: "2rem",
-        backgroundImage: "linear-gradient(to left, #000046,#1CB5E0)",
+        backgroundImage: "linear-gradient(to left, #000046,#f50057)",
         clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
         top: "0",
         left: "10rem",
         [theme.breakpoints.down('md')]: {
-            display: "none"
-
-        }
+            left: "0",
+            width: "100%"
+            
+        },
+        [theme.breakpoints.down('sm')]: {
+            width: "20rem",
+            height: "20rem",
+            borderRadius: "50%",
+            left: "1rem",
+            top: "unset",
+            bottom: "0rem",
+       }
         // zIndex: "10",
     },
     wrapper: {
@@ -103,7 +112,7 @@ export const useStyles = makeStyles((theme) => ({
 
         },
         [theme.breakpoints.down('md')]: {
-            width: "80%",
+            width: "90%",
             "&>p": {
                 fontSize: "1.5rem"
             }
@@ -155,7 +164,7 @@ export const useStyles = makeStyles((theme) => ({
             textAlign: "left",
             marginBottom: "2rem",
         },
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down('sm')]: {
             "& h2": {
                 fontSize: "2.5rem"
             }

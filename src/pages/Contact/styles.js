@@ -181,5 +181,13 @@ export const useStyles = makeStyles((theme) => ({
     },
     icon:{
         fontSize: "2.5rem !important",
+    },
+    mail:{
+        fontSize: "2rem !important",
+        color: "#333",
+        margin: "2rem 0",
+        "& p":{
+            color: "#f50057",
+        }
     }
 }));
