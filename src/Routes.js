@@ -13,7 +13,7 @@ const Router = () => {
 
     return (
         <ThemeProvider theme={theme}>
-            <BrowserRouter basename={process.env.PUBLIC_URL}>
+            <BrowserRouter>
                 <Navbar />
                 <Routes>
                     <Route exact path="" element={<Home />} />
