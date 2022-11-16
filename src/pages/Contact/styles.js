@@ -9,7 +9,7 @@ export const useStyles = makeStyles((theme) => ({
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: "#f5f5f5",
-        [theme.breakpoints.down('md')]:{
+        [theme.breakpoints.down('md')]: {
             height: "unset"
         }
     },
@@ -76,7 +76,7 @@ export const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down("md")]: {
             width: "100%",
             height: "100%",
-            "& h2":{
+            "& h2": {
                 fontSize: "2rem"
             }
         },
@@ -119,10 +119,18 @@ export const useStyles = makeStyles((theme) => ({
             fontSize: "2rem",
             border: "none",
             outline: "none",
-            backgroundColor: "#f50057",
             color: "#fff",
             borderRadius: "2rem",
             cursor: "pointer",
+            // backgroundColor: "#C33764",
+            // "&:hover": {
+            //     backgroundColor: "#f50057",
+            // },
+            backgroundImage: "linear-gradient(to right, #C33764 0%, #1D2671 74%) !important",
+            "&:hover": {
+                // backgroundColor: "#f50057 !important",
+                backgroundImage: "linear-gradient(to right, #f50057 0%, #1D2671 74%) !important",
+            },
         }
     },
     wrapper: {
@@ -146,13 +154,13 @@ export const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down("md")]: {
             width: "100%",
             height: "100%",
-            "& h2":{
-            width: "90%",
-            fontSize: "2.5rem",
+            "& h2": {
+                width: "90%",
+                fontSize: "2.5rem",
             }
         },
     },
-    social:{
+    social: {
         width: "80%",
         height: "100%",
         display: "flex",
@@ -172,21 +180,23 @@ export const useStyles = makeStyles((theme) => ({
             cursor: "pointer",
             transition: "all 0.5s ease",
             "&:hover": {
-                backgroundColor: "#f50057",
+                // backgroundColor: "#f50057",
+                backgroundImage: "linear-gradient(to right, #C33764, #1D2671) !important",
+
             }
         },
         [theme.breakpoints.down("md")]: {
             marginBottom: "2rem"
         }
     },
-    icon:{
+    icon: {
         fontSize: "2.5rem !important",
     },
-    mail:{
+    mail: {
         fontSize: "2rem !important",
         color: "#333",
         margin: "2rem 0",
-        "& p":{
+        "& p": {
             color: "#f50057",
         }
     }

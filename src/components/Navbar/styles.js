@@ -1,7 +1,7 @@
 import { makeStyles } from "@mui/styles";
 
 export const useStyles = makeStyles((theme) => ({
-    container:{
+    container: {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
@@ -14,39 +14,45 @@ export const useStyles = makeStyles((theme) => ({
             padding: '0 1rem',
         }
     },
-    logo:{
-        fontSize: '2.5rem',
+    logo: {
+        fontSize: '3rem',
         fontWeight: 'bold',
-        '& a':{
-            color: '#000',
+        '& a': {
+            // color: '#000',
             textDecoration: 'none',
+
+            "& h4": {
+                background: "-webkit-linear-gradient(#C33764 40%, #021B79)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+            }
         },
         [theme.breakpoints.down('sm')]: {
             display: "none"
         }
     },
-    nav:{
-        '& ul':{
+    nav: {
+        '& ul': {
             display: 'flex',
             listStyle: 'none',
-            '& li':{
+            '& li': {
                 margin: '0 1rem',
-                '& a':{
+                '& a': {
                     textDecoration: 'none',
                     color: '#000',
                     fontSize: '2rem',
                     fontWeight: '500',
                     transition: 'all 0.3s ease',
-                    '&:hover':{
+                    '&:hover': {
                         color: '#f50057'
                     }
                 }
             }
         },
         [theme.breakpoints.down('sm')]: {
-            '& ul':{
-            margin: "auto"
-        }
+            '& ul': {
+                margin: "auto"
+            }
         }
     }
 }));

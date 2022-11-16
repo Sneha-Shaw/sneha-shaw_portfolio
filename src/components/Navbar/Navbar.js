@@ -8,7 +8,7 @@ const Navbar = () => {
     return (
         <div className={classes.container}>
             <div className={classes.logo}>
-                <Link to="/">My Portfolio</Link>
+                <Link to="/"><h4>My Portfolio</h4></Link>
             </div>
             <div className={classes.nav}>
                 <ul>

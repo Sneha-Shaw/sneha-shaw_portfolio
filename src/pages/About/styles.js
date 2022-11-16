@@ -125,9 +125,11 @@ export const useStyles = makeStyles((theme) => ({
         fontSize: "1.7rem !important",
         fontWeight: "bold !important",
         color: "white",
-        backgroundColor: "#C33764 !important",
+        // backgroundColor: "#C33764 !important",
+        backgroundImage: "linear-gradient(to right, #C33764 0%, #1D2671 74%) !important",
         "&:hover": {
-            backgroundColor: "#f50057 !important",
+            // backgroundColor: "#f50057 !important",
+            backgroundImage: "linear-gradient(to right, #f50057 0%, #1D2671 74%) !important",
         },
         [theme.breakpoints.down('md')]: {
             width: "60%",
