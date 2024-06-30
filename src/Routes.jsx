@@ -12,7 +12,7 @@ import Footer from "./components/Footer/Footer";
 const Router = () => {
   return (
     <ThemeProvider theme={theme}>
-      <div className="h-screen flex flex-col justify-between">
+      <div className="flex flex-col justify-between">
         <BrowserRouter>
           <Navbar />
           <Routes>
