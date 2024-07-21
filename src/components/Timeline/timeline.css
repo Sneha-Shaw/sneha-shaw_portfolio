@@ -1,6 +1,12 @@
 .showCard {
+  transform: translate(0px) !important;
+  opacity: 1 !important;
+}
 
-    transform: translate(0px) !important;
-    opacity: 1 !important;
+.light .card {
+  background-color: rgb(229 231 235);
+}
 
+.dark .card {
+  background-color: #535c91;
 }

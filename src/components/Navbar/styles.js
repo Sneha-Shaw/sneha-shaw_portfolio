@@ -9,6 +9,8 @@ export const useStyles = makeStyles((theme) => ({
     boxShadow: "0 0 2rem rgba(0,0,0,0.1)",
     zIndex: "200",
     overflow: "hidden",
+    position: "sticky",
+    top: 0,
   },
   logo: {
     fontSize: "2rem",
@@ -37,7 +39,7 @@ export const useStyles = makeStyles((theme) => ({
           fontWeight: "500",
           transition: "all 0.3s ease",
           "&:hover": {
-            color: "#f50057",
+            color: "#FF4191",
           },
         },
       },

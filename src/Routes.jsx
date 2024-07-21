@@ -7,12 +7,12 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Projects from "./pages/Project/Project";
 import Contact from "./pages/Contact/Contact";
-import Footer from "./components/Footer/Footer";
+import { SystemThemeProvider } from "./context/ThemeProvider";
 
 const Router = () => {
   return (
     <ThemeProvider theme={theme}>
-      <div className="flex flex-col justify-between">
+      <SystemThemeProvider>
         <BrowserRouter>
           <Navbar />
           <Routes>
@@ -22,8 +22,7 @@ const Router = () => {
             <Route exact path="/contact" element={<Contact />} />
           </Routes>
         </BrowserRouter>
-        <Footer />
-      </div>
+      </SystemThemeProvider>
     </ThemeProvider>
   );
 };

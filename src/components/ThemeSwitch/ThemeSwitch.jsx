@@ -1,54 +1,19 @@
-import {
-  Button,
-  ListItem,
-  MenuItem,
-  Popover,
-  Select,
-  Typography,
-} from "@mui/material";
-import { useState } from "react";
-import { CiSun } from "react-icons/ci";
-import { IoMdLaptop } from "react-icons/io";
-import { PiMoonStars } from "react-icons/pi";
-
-const themes = [
-  {
-    label: "Light",
-    value: "light",
-    icon: <CiSun />,
-  },
-  {
-    label: "Dark",
-    value: "dark",
-    icon: <PiMoonStars />,
-  },
-  {
-    label: "System",
-    value: "system",
-    icon: <IoMdLaptop />,
-  },
-];
+import { ListItem, Popover } from "@mui/material";
+import { useState, useContext } from "react";
+import { themes, ThemeContext } from "../../context/ThemeProvider";
 
 export default function ThemeSwitch() {
-  const [selection, setSelection] = useState("light");
   const [anchorEl, setAnchorEl] = useState(null);
 
-  const handleChange = (value) => {
-    if (value == "system") {
-      setSelection("dark");
-      setAnchorEl(null);
-      return;
-    }
-    setSelection(value);
-    setAnchorEl(null);
-  };
+  const { selection, toggleTheme } = useContext(ThemeContext);
+
   const open = Boolean(anchorEl);
   const selectedIcon = themes.find((theme) => theme.value === selection).icon;
   return (
     <>
       <button
         onClick={(event) => setAnchorEl(event.currentTarget)}
-        className="text-2xl text-pink-500"
+        className="text-2xl text-[#FF4191]"
       >
         {selectedIcon}
       </button>
@@ -65,9 +30,12 @@ export default function ThemeSwitch() {
           return (
             <ListItem
               key={index}
-              className="gap-1 bg-white hover:bg-slate-100 hover:text-pink-500 cursor-pointer"
+              className={`gap-1 bg-white hover:bg-slate-100 hover:text-[#FF4191] ${
+                selection === theme.value ? "text-[#FF4191]" : ""
+              } cursor-pointer`}
               onClick={() => {
-                handleChange(theme.value);
+                toggleTheme(theme.value);
+                setAnchorEl(null);
               }}
             >
               {theme.icon}
