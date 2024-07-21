@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Home() {
   return (
-    <div className="flex justify-center home-bg flex-col items-center p-5 h-[90vh]">
+    <div className="flex justify-center home-bg flex-col items-center h-[92vh]">
       <p className="heading">Home</p>
       <div className="text-[5rem] text-center leading-tight ">
         Hi, I am Sneha Shaw,

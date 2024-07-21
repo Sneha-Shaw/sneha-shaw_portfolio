@@ -17,7 +17,7 @@ const Navbar = () => {
   // navbar for portfolio
   return (
     // responsive navbar
-    <div className="w-full p-1 px-5 nav-bg shadow-sm sticky top-0 z-50">
+    <div className="w-full p-1 px-5 nav-bg h-[8vh] shadow-sm sticky top-0 z-50">
       <div
         className="w-full flex items-center justify-between"
         style={{
@@ -82,7 +82,8 @@ const Navbar = () => {
           </NavLink>
           <NavLink
             onClick={closeMenu}
-            to="/projects"
+            target="_blank"
+            to="https://github.com/Sneha-Shaw"
             style={getLinkStyle}
             className="flex items-center gap-2"
           >
