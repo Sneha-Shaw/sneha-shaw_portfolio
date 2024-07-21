@@ -1,142 +1,85 @@
-import React from 'react'
-import { useStyles } from './styles'
-import mypic from '../../assets/mee.jpg'
-import { Container, Grid, Typography, Button } from '@mui/material'
-// import { Link } from 'react-router-dom'
-import DownloadIcon from '@mui/icons-material/Download';
-import CV from '../../assets/Sneha Shaw Nov22.pdf'
+import mui from "../../assets/mui.png";
+import next from "../../assets/nextJs.png";
+import node from "../../assets/nodeJs.png";
+import react from "../../assets/react.png";
+import sass from "../../assets/sass.png";
+import tailwind from "../../assets/tailwind.png";
+import mongodb from "../../assets/mongodb.png";
+import typescript from "../../assets/typescript.png";
+import express from "../../assets/express.png";
+import reactQuery from "../../assets/react-query.svg";
+import apollo from "../../assets/apollo.png";
+import redux from "../../assets/redux.png";
+import Timeline from "../../components/Timeline/Timeline";
 
-const About = () => {
-  const classes = useStyles()
+const stacks = [
+  react,
+  mui,
+  node,
+  tailwind,
+  typescript,
+  mongodb,
+  sass,
+  express,
+  next,
+  reactQuery,
+  apollo,
+  redux,
+];
+
+export default function About() {
   return (
-    <div className={classes.Maincontainer}>
-      <h1 className={classes.title}>About <span>Me</span></h1>
-      <div className={classes.container}>
-        <div className={classes.left}>
-          <div className={classes.imgDesign}>
-
-          </div>
-          <div className={classes.imgContainer}>
-            <img src={mypic} alt="mypic" />
-          </div>
+    <div className="flex justify-center flex-col items-center p-5 w-screen md:mt-[5rem]">
+      <p className="heading">About</p>
+      <div className="border border-slate-500 box-bg rounded-md mt-3 w-full lg:w-1/2 flex flex-col items-start justify-center">
+        <div className="border-b box-border p-2 w-full">
+          <h2>Some things about me:</h2>
         </div>
-        <div className={classes.right}>
-          <div className={classes.wrapper}>
-            <p>
-              Hi I'm a 21 year old full stack developer from Kolkata who loves solving problems in ways that are both creative and sustainable.
-              My specialty is Front-End Web Development. My hobbies are making digital portraits and cycling.
-            </p>
-          </div>
-          <Button
-            variant="contained"
-            color="primary"
-            size="large"
-            href={CV}
-            target="_blank"
-            download="Sneha Shaw_Resume"
-            startIcon={<DownloadIcon />}
-            className={classes.button}
-          >
-            Download CV
-          </Button>
+        <ul className=" list-square w-full px-10 py-2 text-start">
+          <li>
+            Hi there! I'm <span className="text-[#FF4191]">Sneha Shaw,</span> a
+            full stack web developer based in Kolkata.
+          </li>
+          <li>
+            I am passionate about{" "}
+            <span className="text-[#FF4191]">Front-End Development.</span>
+          </li>
+          <li>
+            I enjoy transforming your ideas into user-friendly digital
+            experiences, blending{" "}
+            <span className="text-[#FF4191]">creativity</span> with{" "}
+            <span className="text-[#FF4191]">technical expertise.</span>
+          </li>
+        </ul>
+      </div>
+      <div className="border border-slate-500 box-bg rounded-md mt-3 w-full lg:w-1/2 flex flex-col items-start justify-center">
+        <div className="border-b border-slate-500 p-2 w-full">
+          <h2>My Skills:</h2>
+        </div>
+        <div className="rounded-md p-4 w-full grid md:grid-cols-3 items-center gap-2 justify-center">
+          {stacks.map((stack, index) => {
+            return (
+              <div
+                key={index}
+                className="w-full md:w-[10rem] h-[4rem] md:h-[6rem] m-auto skill"
+              >
+                <img
+                  src={stack}
+                  alt="logo"
+                  className="w-full h-full object-contain m-auto"
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
-      {/* skill section */}
-      <div className={classes.skillContainer}>
-        <h1 className={classes.title}><span>MY </span> SKILLS</h1>
-        <Container className={classes.gridContainer}>
-          <h2>Languages:</h2>
-          <Grid container spacing={2} className={classes.grid}>
-            <Grid item xs={6} sm={3} className={classes.gridItem}>
-              <Typography variant="h6" className={classes.skill}>JavaScript</Typography>
-            </Grid>
-            <Grid item xs={6} sm={3} className={classes.gridItem}>
-              <Typography variant="h6" className={classes.skill}>Java</Typography>
-            </Grid>
-            <Grid item xs={6} sm={3} className={classes.gridItem}>
-              <Typography variant="h6" className={classes.skill}>C</Typography>
-            </Grid>
-          </Grid>
-        </Container>
-        <Container className={classes.gridContainer}>
-          <h2>Front-End:</h2>
-          <Grid container spacing={2} className={classes.grid}>
-            <Grid item xs={6} sm={3} className={classes.gridItem}>
-              <Typography variant="h6" className={classes.skill}>HTML</Typography>
-            </Grid>
-            <Grid item xs={6} sm={3} className={classes.gridItem}>
-              <Typography variant="h6" className={classes.skill}>CSS</Typography>
-            </Grid>
-            <Grid item xs={6} sm={3} className={classes.gridItem}>
-              <Typography variant="h6" className={classes.skill}>JQuery</Typography>
-            </Grid>
-            <Grid item xs={6} sm={3} className={classes.gridItem}>
-              <Typography variant="h6" className={classes.skill}>React</Typography>
-            </Grid>
-            <Grid item xs={6} sm={3} className={classes.gridItem}>
-              <Typography variant="h6" className={classes.skill}>Material UI</Typography>
-            </Grid>
-            <Grid item xs={6} sm={3} className={classes.gridItem}>
-              <Typography variant="h6" className={classes.skill}>Bootstrap</Typography>
-            </Grid>
-            <Grid item xs={6} sm={3} className={classes.gridItem}>
-              <Typography variant="h6" className={classes.skill}>Tailwind CSS</Typography>
-            </Grid>
-            <Grid item xs={6} sm={3} className={classes.gridItem}>
-              <Typography variant="h6" className={classes.skill}>SASS</Typography>
-            </Grid>
-          </Grid>
-        </Container>
-        <Container className={classes.gridContainer}>
-          <h2>Back-End:</h2>
-          <Grid container spacing={2} className={classes.grid}>
-            <Grid item xs={6} sm={3} className={classes.gridItem}>
-              <Typography variant="h6" className={classes.skill}>Node.js</Typography>
-            </Grid>
-            <Grid item xs={6} sm={3} className={classes.gridItem}>
-              <Typography variant="h6" className={classes.skill}>Express.js</Typography>
-            </Grid>
-            <Grid item xs={6} sm={3} className={classes.gridItem}>
-              <Typography variant="h6" className={classes.skill}>REST Api</Typography>
-            </Grid>
-          </Grid>
-        </Container>
-        <Container className={classes.gridContainer}>
-          <h2>Database:</h2>
-          <Grid container spacing={2} className={classes.grid}>
-            <Grid item xs={6} sm={3} className={classes.gridItem}>
-              <Typography variant="h6" className={classes.skill}>MySQL</Typography>
-            </Grid>
-            <Grid item xs={6} sm={3} className={classes.gridItem}>
-              <Typography variant="h6" className={classes.skill}>MongoDB</Typography>
-            </Grid>
-          </Grid>
-        </Container>
-        <Container className={classes.gridContainer}>
-          <h2>Tools:</h2>
-          <Grid container spacing={2} className={classes.grid}>
-            <Grid item xs={6} sm={3} className={classes.gridItem}>
-              <Typography variant="h6" className={classes.skill}>Git</Typography>
-            </Grid>
-            <Grid item xs={6} sm={3} className={classes.gridItem}>
-              <Typography variant="h6" className={classes.skill}>GitHub</Typography>
-            </Grid>
-            <Grid item xs={6} sm={3} className={classes.gridItem}>
-              <Typography variant="h6" className={classes.skill}>Heroku</Typography>
-            </Grid>
-            <Grid item xs={6} sm={3} className={classes.gridItem}>
-              <Typography variant="h6" className={classes.skill}>Netlify</Typography>
-            </Grid>
-            <Grid item xs={6} sm={3} className={classes.gridItem}>
-              <Typography variant="h6" className={classes.skill}>Illustrator</Typography>
-            </Grid>
-          </Grid>
-        </Container>
 
+      <div className="underline m-auto text-4xl  text-pink-500 my-8 underline-offset-8">
+        <h2>My Timeline</h2>
       </div>
-
+      <div className="rounded-md p-4 flex w-full md:h-[180vh] overflow-hidden items-center gap-2 justify-center">
+        <Timeline />
+      </div>
     </div>
-  )
+  );
 }
-
-export default About

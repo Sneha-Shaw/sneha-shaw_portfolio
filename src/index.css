@@ -1,9 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-
-* {
-    margin: 0;
-    padding: 0;
+.dark .home-bg {
+  background-color: #535c91;
+  color: #fff;
 }
-html{
-    font-size: 62.50%;
+
+.light .nav-bg {
+  background-color: rgb(229 231 235);
+}
+
+.dark .nav-bg {
+  background-color: #102c57;
+}
+
+.light .heading {
+  color: rgb(51 65 85);
+}
+
+.light .sub-text {
+  color: rgb(100 116 139);
+}
+
+.dark .box-bg {
+  background-color: #535c91;
+  color: #fff;
+  border: 1px solid;
+}
+
+.light .box-border {
+  border-bottom: 1px solid rgb(100 116 139);
+}
+
+.dark .skill {
+  background-color: aliceblue;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
