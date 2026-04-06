@@ -1,68 +1,63 @@
 import React, { createContext, useState, useEffect } from "react";
-import { CiSun } from "react-icons/ci";
-import { IoMdLaptop } from "react-icons/io";
-import { PiMoonStars } from "react-icons/pi";
 import "./theme.css";
 
 const ThemeContext = createContext();
+const STORAGE_KEY = "theme-selection";
 
-export const themes = [
-  {
-    label: "Light",
-    value: "light",
-    icon: <CiSun />,
-  },
-  {
-    label: "Dark",
-    value: "dark",
-    icon: <PiMoonStars />,
-  },
-  {
-    label: "System",
-    value: "system",
-    icon: <IoMdLaptop />,
-  },
-];
+const getSystemTheme = () => {
+  if (typeof window === "undefined") {
+    return "light";
+  }
+
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
 
 const SystemThemeProvider = ({ children }) => {
-  const [selection, setSelection] = useState("light");
-
-  useEffect(() => {
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? setSelection("dark")
-      : setSelection("light");
-  }, []);
-
-  const mqListener = (e) => {
-    if (e.matches) {
-      setSelection("dark");
-    } else {
-      setSelection("light");
+  const [selection, setSelection] = useState(() => {
+    if (typeof window === "undefined") {
+      return "system";
     }
-  };
+
+    return localStorage.getItem(STORAGE_KEY) || "system";
+  });
+
+  const [activeTheme, setActiveTheme] = useState(() =>
+    selection === "system" ? getSystemTheme() : selection
+  );
 
   useEffect(() => {
+    localStorage.setItem(STORAGE_KEY, selection);
+  }, [selection]);
+
+  useEffect(() => {
+    if (selection !== "system") {
+      setActiveTheme(selection);
+      return undefined;
+    }
+
     const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
-    darkThemeMq.addEventListener("change", mqListener);
-    return () => {
-      darkThemeMq.removeEventListener("change", mqListener);
+
+    const handleThemeChange = (event) => {
+      setActiveTheme(event.matches ? "dark" : "light");
     };
-  }, []);
+
+    setActiveTheme(darkThemeMq.matches ? "dark" : "light");
+    darkThemeMq.addEventListener("change", handleThemeChange);
+
+    return () => {
+      darkThemeMq.removeEventListener("change", handleThemeChange);
+    };
+  }, [selection]);
 
   const toggleTheme = (value) => {
-    if (value == "system") {
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? setSelection("dark")
-        : setSelection("light");
-
-      return;
-    }
     setSelection(value);
   };
 
   return (
-    <ThemeContext.Provider value={{ selection, toggleTheme }}>
-      <div className={selection}>{children}</div>
+    <ThemeContext.Provider value={{ selection, activeTheme, toggleTheme }}>
+      <div className={activeTheme}>{children}</div>
     </ThemeContext.Provider>
   );
 };

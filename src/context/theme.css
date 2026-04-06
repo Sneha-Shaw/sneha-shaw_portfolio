@@ -1,5 +1,5 @@
 .light {
-  background-color: white;
+  background-color: var(--color-page-light);
 }
 
 .dark {

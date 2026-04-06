@@ -37,16 +37,16 @@ const Contact = () => {
       .catch((err) =>
         console.error(
           "Oh well, you failed. Here some thoughts on the error that occured:",
-          err
-        )
+          err,
+        ),
       );
   };
   return (
-    <div className="flex justify-center flex-col items-center p-5 md:mt-[5rem]">
+    <div className="flex justify-center flex-col items-center p-5 md:mt-[5rem] h-[83.36vh]">
       <p className="heading">Contact</p>
       {/* mail me form */}
-      <div className="border border-slate-500 box-bg rounded-md mt-3 w-full lg:w-1/2 flex flex-col items-start justify-center">
-        <div className="border-b border-slate-500 p-2 w-full">
+      <div className="surface-section box-bg lg:w-1/2">
+        <div className="section-header">
           <h2>Let's create something awesome together!</h2>
         </div>
         <form
@@ -55,35 +55,32 @@ const Contact = () => {
         >
           <input
             type="text"
-            className="border border-slate-500 focus:border-[#FF4191] outline-none rounded-md p-2 w-full"
+            className="field-input"
             placeholder="Name"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
           <input
             type="email"
-            className="border border-slate-500 outline-none focus:border-[#FF4191] rounded-md p-2 w-full"
+            className="field-input"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <textarea
-            className="border border-slate-500 focus:border-[#FF4191] outline-none resize-none rounded-md p-2 w-full"
+            className="field-input resize-none"
             placeholder="Message"
             rows={5}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           ></textarea>
-          <button
-            type="submit"
-            className="rounded-md p-2 w-fit px-10 hover:bg-[#e93d84] bg-[#FF4191] hover:text-white"
-          >
+          <button type="submit" className="btn-primary">
             Send
           </button>
         </form>
       </div>
-      <div className="border border-slate-500 box-bg rounded-md mt-3 w-full lg:w-1/2 flex flex-col items-start justify-center">
-        <div className="border-b border-slate-500 p-2 w-full">
+      <div className="surface-section box-bg lg:w-1/2">
+        <div className="section-header">
           <h2>Connect with me:</h2>
         </div>
         <div className="flex flex-col gap-2 p-4 w-full items-center justify-center">
@@ -91,7 +88,7 @@ const Contact = () => {
             href="https://github.com/Sneha-Shaw"
             target="_blank"
             rel="noreferrer"
-            className="border border-slate-500 rounded-md p-2 w-full flex items-center justify-center gap-2 hover:bg-[#FF4191] hover:border-transparent hover:text-white"
+            className="interactive-card"
           >
             <GitHubIcon className="w-10" />
             <p className="w-[2rem]">GitHub</p>
@@ -100,7 +97,7 @@ const Contact = () => {
             href="https://www.linkedin.com/in/sneha-shaw122"
             target="_blank"
             rel="noreferrer"
-            className="border border-slate-500 rounded-md p-2 w-full flex items-center justify-center gap-2 hover:bg-[#FF4191] hover:border-transparent hover:text-white"
+            className="interactive-card"
           >
             <LinkedInIcon className="w-10" />
             <p className="w-[2rem]">LinkedIn</p>
@@ -109,7 +106,7 @@ const Contact = () => {
             href="mailto:snehashaw122@gmail.com"
             target="_blank"
             rel="noreferrer"
-            className="border border-slate-500 rounded-md p-2 w-full flex items-center justify-center gap-2 hover:bg-[#FF4191] hover:border-transparent hover:text-white"
+            className="interactive-card"
           >
             <MailIcon className="w-10" />
             <p className="w-[2rem]">Email</p>

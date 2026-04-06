@@ -2,39 +2,195 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-accent: #ff4191;
+  --color-accent-hover: #e93d84;
+  --color-accent-deep: #c33764;
+  --color-accent-soft: #ff7eb8;
+  --color-brand-blue: #021b79;
+  --color-accent-foreground: #ffffff;
+  --color-page-light: #f6f3ef;
+  --color-heading-light: rgb(51 65 85);
+  --color-body-light: rgb(100 116 139);
+  --color-surface-light: rgb(229 231 235);
+  --color-surface-dark: #535c91;
+  --color-nav-dark: #102c57;
+  --color-border-light: rgb(100 116 139);
+  --color-skill-surface-dark: aliceblue;
+  --brand-gradient: linear-gradient(
+    90deg,
+    var(--color-accent-deep),
+    var(--color-accent),
+    var(--color-accent-soft)
+  );
+}
+
+@layer components {
+  .accent-text {
+    color: var(--color-accent);
+  }
+
+  .surface-card {
+    @apply border border-slate-500 rounded-md;
+  }
+
+  .surface-section {
+    @apply surface-card mt-3 w-full flex flex-col items-start justify-center;
+  }
+
+  .section-header {
+    @apply border-b border-slate-500 p-2 w-full;
+  }
+
+  .info-chip {
+    @apply border border-slate-500 rounded-full px-3 py-1 text-sm;
+  }
+
+  .interactive-panel {
+    @apply transition-all duration-300;
+  }
+
+  .interactive-panel:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-accent);
+    box-shadow: 0 14px 34px color-mix(in srgb, var(--color-accent) 12%, transparent);
+  }
+
+  .interactive-card {
+    @apply border border-slate-500 rounded-md p-2 w-full flex items-center justify-center gap-2 transition-colors;
+  }
+
+  .interactive-card:hover {
+    background-color: var(--color-accent);
+    border-color: transparent;
+    color: var(--color-accent-foreground);
+  }
+
+  .field-input {
+    @apply border border-slate-500 outline-none rounded-md p-2 w-full;
+  }
+
+  .field-input:focus {
+    border-color: var(--color-accent);
+  }
+
+  .btn-primary {
+    @apply rounded-md p-2 w-fit px-10 transition-colors;
+    background-color: var(--color-accent);
+    color: var(--color-nav-dark);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-accent-hover);
+  }
+
+  .btn-secondary {
+    @apply rounded-md p-2 w-fit px-10 transition-colors border border-slate-500;
+    color: var(--color-accent);
+  }
+
+  .btn-secondary:hover {
+    background-color: color-mix(in srgb, var(--color-accent) 14%, transparent);
+    border-color: var(--color-accent);
+  }
+
+  .brand-gradient-text {
+    background: var(--brand-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .brand-link {
+    @apply no-underline;
+    color: inherit;
+  }
+
+  .brand-mark {
+    @apply font-bold tracking-wide;
+    text-shadow: 0 0 20px color-mix(in srgb, var(--color-accent) 18%, transparent);
+  }
+
+  .theme-toggle {
+    @apply inline-flex items-center gap-2 rounded-full border border-slate-400 px-3 py-2 transition-colors;
+    background-color: color-mix(in srgb, var(--color-accent) 8%, transparent);
+  }
+
+  .theme-toggle:hover {
+    border-color: var(--color-accent);
+  }
+
+  .theme-toggle__icon {
+    @apply flex items-center justify-center text-xl transition-all;
+    color: color-mix(in srgb, currentColor 42%, transparent);
+  }
+
+  .theme-toggle__icon.is-active {
+    color: var(--color-accent);
+    transform: scale(1.08);
+  }
+
+  .theme-toggle__track {
+    @apply relative block h-6 w-11 rounded-full;
+    background-color: color-mix(in srgb, var(--color-accent) 20%, transparent);
+  }
+
+  .theme-toggle__thumb {
+    @apply absolute top-0.5 left-0.5 h-5 w-5 rounded-full transition-transform;
+    background: linear-gradient(
+      135deg,
+      var(--color-accent-soft),
+      var(--color-accent)
+    );
+    box-shadow: 0 0 14px color-mix(in srgb, var(--color-accent) 22%, transparent);
+  }
+
+  .theme-toggle.is-dark .theme-toggle__thumb {
+    transform: translateX(20px);
+  }
+}
+
 .dark .home-bg {
-  background-color: #535c91;
+  background-color: var(--color-surface-dark);
   color: #fff;
 }
 
+.dark {
+  --color-accent: #ff8fc8;
+  --color-accent-hover: #ff79bd;
+  --color-accent-deep: #ff66b3;
+  --color-accent-soft: #ffc2e2;
+  --color-brand-blue: #8fd6ff;
+  --color-accent-foreground: #1f1140;
+}
+
 .light .nav-bg {
-  background-color: rgb(229 231 235);
+  background-color: var(--color-surface-light);
 }
 
 .dark .nav-bg {
-  background-color: #102c57;
+  background-color: var(--color-nav-dark);
 }
 
 .light .heading {
-  color: rgb(51 65 85);
+  color: var(--color-heading-light);
 }
 
 .light .sub-text {
-  color: rgb(100 116 139);
+  color: var(--color-body-light);
 }
 
 .dark .box-bg {
-  background-color: #535c91;
+  background-color: var(--color-surface-dark);
   color: #fff;
   border: 1px solid;
 }
 
 .light .box-border {
-  border-bottom: 1px solid rgb(100 116 139);
+  border-bottom: 1px solid var(--color-border-light);
 }
 
 .dark .skill {
-  background-color: aliceblue;
+  background-color: var(--color-skill-surface-dark);
   padding: 0.5rem;
   border-radius: 0.5rem;
 }
