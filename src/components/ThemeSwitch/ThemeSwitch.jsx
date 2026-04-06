@@ -1,49 +1,29 @@
-import { ListItem, Popover } from "@mui/material";
-import { useState, useContext } from "react";
-import { themes, ThemeContext } from "../../context/ThemeProvider";
+import { useContext } from "react";
+import { CiSun } from "react-icons/ci";
+import { PiMoonStars } from "react-icons/pi";
+import { ThemeContext } from "../../context/ThemeProvider";
 
 export default function ThemeSwitch() {
-  const [anchorEl, setAnchorEl] = useState(null);
+  const { activeTheme, toggleTheme } = useContext(ThemeContext);
+  const isDark = activeTheme === "dark";
 
-  const { selection, toggleTheme } = useContext(ThemeContext);
-
-  const open = Boolean(anchorEl);
-  const selectedIcon = themes.find((theme) => theme.value === selection).icon;
   return (
-    <>
-      <button
-        onClick={(event) => setAnchorEl(event.currentTarget)}
-        className="text-2xl text-[#FF4191]"
-      >
-        {selectedIcon}
-      </button>
-      <Popover
-        open={open}
-        anchorEl={anchorEl}
-        onClose={() => setAnchorEl(null)}
-        anchorOrigin={{
-          vertical: "bottom",
-          horizontal: "left",
-        }}
-      >
-        {themes.map((theme, index) => {
-          return (
-            <ListItem
-              key={index}
-              className={`gap-1 bg-white hover:bg-slate-100 hover:text-[#FF4191] ${
-                selection === theme.value ? "text-[#FF4191]" : ""
-              } cursor-pointer`}
-              onClick={() => {
-                toggleTheme(theme.value);
-                setAnchorEl(null);
-              }}
-            >
-              {theme.icon}
-              {theme.label}
-            </ListItem>
-          );
-        })}
-      </Popover>
-    </>
+    <button
+      type="button"
+      aria-label={`Switch to ${isDark ? "light" : "dark"} mode`}
+      aria-pressed={isDark}
+      onClick={() => toggleTheme(isDark ? "light" : "dark")}
+      className={`theme-toggle ${isDark ? "is-dark" : "is-light"}`}
+    >
+      <span className={`theme-toggle__icon ${!isDark ? "is-active" : ""}`}>
+        <CiSun />
+      </span>
+      <span className="theme-toggle__track">
+        <span className="theme-toggle__thumb" />
+      </span>
+      <span className={`theme-toggle__icon ${isDark ? "is-active" : ""}`}>
+        <PiMoonStars />
+      </span>
+    </button>
   );
 }

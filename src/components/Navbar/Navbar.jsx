@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { MdHome, MdCall } from "react-icons/md";
 import { IoMdPerson, IoMdLaptop } from "react-icons/io";
 import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";
@@ -8,7 +8,7 @@ import { MdOutlineMenuOpen } from "react-icons/md";
 const Navbar = () => {
   const [open, setOpen] = React.useState(false);
   const getLinkStyle = ({ isActive }) => ({
-    color: isActive ? "#FF4191" : "",
+    color: isActive ? "var(--color-accent)" : "",
   });
 
   const closeMenu = () => {
@@ -25,24 +25,8 @@ const Navbar = () => {
         }}
       >
         <div className="flex items-center gap-4">
-          <Link
-            to="/"
-            style={{
-              color: "black",
-              textDecoration: "none",
-              fontSize: "1.5rem",
-              fontWeight: "bold",
-            }}
-          >
-            <h4
-              style={{
-                background: "-webkit-linear-gradient(#C33764 40%, #021B79)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
-            >
-              Portfolio
-            </h4>
+          <Link to="/" className="brand-link text-2xl">
+            <h4 className="brand-gradient-text brand-mark">Portfolio</h4>
           </Link>
 
           <div
@@ -82,8 +66,7 @@ const Navbar = () => {
           </NavLink>
           <NavLink
             onClick={closeMenu}
-            target="_blank"
-            to="https://github.com/Sneha-Shaw"
+            to="/projects"
             style={getLinkStyle}
             className="flex items-center gap-2"
           >

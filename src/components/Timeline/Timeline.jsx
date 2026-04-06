@@ -96,15 +96,15 @@ const Timeline = () => {
 
   return (
     <div className="relative w-full h-full flex-col gap-6 flex items-center ">
-      <div className="w-4 h-4 aspect-square rounded-full hidden sm:block bg-[#FF4191] transition-all duration-500" />
+      <div className="w-4 h-4 aspect-square rounded-full hidden sm:block bg-[var(--color-accent)] transition-all duration-500" />
 
-      <div className="absolute hidden sm:block line top-0 w-1 h-0 bg-[#FF4191] transition-all duration-500" />
+      <div className="absolute hidden sm:block line top-0 w-1 h-0 bg-[var(--color-accent)] transition-all duration-500" />
 
       {events.map((event, index) => {
         return (
           <Fragment key={index}>
             <div
-              className={`w-4 h-4 dot${index} opacity-0 hidden sm:block absolute aspect-square rounded-full bg-[#FF4191] transition-all duration-500`}
+              className={`w-4 h-4 dot${index} opacity-0 hidden sm:block absolute aspect-square rounded-full bg-[var(--color-accent)] transition-all duration-500`}
               style={{ top: getPosition(index) }}
             />
             <div
@@ -127,7 +127,7 @@ const Timeline = () => {
           </Fragment>
         );
       })}
-      <div className="w-4 h-4 aspect-square absolute bottom-0 rounded-full hidden sm:block bg-[#FF4191] transition-all duration-500" />
+      <div className="w-4 h-4 aspect-square absolute bottom-0 rounded-full hidden sm:block bg-[var(--color-accent)] transition-all duration-500" />
     </div>
   );
 };
